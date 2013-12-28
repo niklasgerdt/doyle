@@ -1,4 +1,4 @@
-package gerdtni.equityresolver;
+package equityresolver;
 
 public class TestDeck implements Deck {
 	protected static int TIMES_CALLED = 0;

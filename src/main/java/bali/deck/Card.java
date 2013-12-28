@@ -16,5 +16,4 @@ public class Card {
 	public Suite getSuite() {
 		return suite;
 	}
-
 }

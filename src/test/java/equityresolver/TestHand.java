@@ -1,4 +1,4 @@
-package gerdtni.equityresolver;
+package equityresolver;
 
 public class TestHand implements Hand {
 	protected static int TIMES_EQUITIES_FOR_HOLECARDS_CALLED;

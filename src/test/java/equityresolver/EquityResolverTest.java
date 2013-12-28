@@ -1,4 +1,4 @@
-package gerdtni.equityresolver;
+package equityresolver;
 
 public class EquityResolverTest {
 	private EquityResolver eq = new SamplingEquityResolver();
