@@ -2,11 +2,15 @@ package doyle;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import doyle.cards.Cards;
+import doyle.cards.Flop;
+import doyle.cards.River;
+import doyle.cards.Turn;
 
 public class DeckImpl extends Cards implements Deck {
 
@@ -30,16 +34,18 @@ public class DeckImpl extends Cards implements Deck {
 
 	@Override
 	public Card dealOne() {
-		Optional<Card> first = cards.stream().findFirst();
-		return first.get();
+//		Optional<Card> first = cards.stream().findFirst();
+//		return first.get();
+		return null;
 	}
 
-	@Override
-	public Flop dealFlop() {
-		Set<Card> flop = cards.stream().limit(3).collect(Collectors.toSet());
-		drop(flop);
-		return new Flop(flop);
-	}
+//	@Override
+//	public Flop dealFlop() {
+//		Set<Card> flop = cards.stream().limit(3).collect(Collectors.toSet());
+//		drop(flop);
+////		return new Flop(flop);
+//		return null;
+//	}
 
 	@Override
 	public Turn dealTurn() {

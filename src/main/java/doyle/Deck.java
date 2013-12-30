@@ -2,6 +2,9 @@ package doyle;
 
 import java.util.Set;
 
+import doyle.cards.River;
+import doyle.cards.Turn;
+
 public interface Deck {
 
 	void drop(Set<Card> cards);
@@ -10,7 +13,7 @@ public interface Deck {
 	
 	Holecards dealHolecards();
 	
-	Flop dealFlop();
+	//Flop dealFlop();
 	
 	Turn dealTurn();
 	
