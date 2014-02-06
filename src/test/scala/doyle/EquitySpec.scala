@@ -1,9 +1,9 @@
-package eu.route20.doyle
+package doyle
 
 import org.scalatest.FeatureSpec
 import org.scalatest.GivenWhenThen
 
-class EquitySpec extends FeatureSpec with GivenWhenThen {
+class EquitySpec extends FeatSpec {
 
   info("As a Hold'Em player")
   info("I want to know my holecards equity against villain's hand")
@@ -14,7 +14,9 @@ class EquitySpec extends FeatureSpec with GivenWhenThen {
       Given("No board cards")
       When("five cards are dealt")
       Then("my equity is 50%")
-      assert(true)
+      assertResult(true, "supposed to return true!"){
+        true
+      }
     }
   }
 }

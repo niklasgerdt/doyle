@@ -1,8 +1,8 @@
-package eu.route20.doyle
+package doyle
 
 import org.scalatest.WordSpec
 
-class SetSpec extends WordSpec {
+class SetSpec extends UnitSpec {
 
   "A Set" when {
     "empty" should {
