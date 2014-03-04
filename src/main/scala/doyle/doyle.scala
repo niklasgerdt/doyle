@@ -12,21 +12,13 @@ object Flop extends GameState
 object Turn extends GameState
 object River extends GameState
 
-trait Calculator {
-  def odds(outs: Int){
-    
-  }
-}
-class OddsCalculator(multiplier: Int){
-  protected def multi = this.multiplier
-}
-
 object doyle {
 
-  def on(state: GameState) = {
-    new OddsCalculator(4){
-      def odds(outs: Int) =  outs * multi / 100.0
-    }
+  def on(outs: Int, state: GameState) = {
+    if (state == Flop)
+      outs * 4 / 100.0
+    else if (state == Turn)
+      outs * 2 / 100.0
   }
 
   def outs(livecards: Int) = 0.25

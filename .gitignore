@@ -5,3 +5,4 @@
 .ensime
 .ensime_lucene/
 .project
+bin/

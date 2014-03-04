@@ -1,0 +1,1 @@
+Portfolio investment analysis and allocation tool. With piVaa you can easily create optimal investment portfolios and evaluate complex rebalancing strategies.
