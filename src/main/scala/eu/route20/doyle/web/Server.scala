@@ -20,7 +20,7 @@ import spray.routing.HttpService
 trait Route extends HttpService {
 
   val route =
-    path("pivaa") {
+    path("doyle") {
       get {
         getFromResource("web/index.html")
       }

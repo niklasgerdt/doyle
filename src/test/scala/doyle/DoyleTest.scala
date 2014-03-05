@@ -15,7 +15,7 @@ class OddsTest extends DoyleTest {
       When("I have 8s7s")
       Then("My odds are")
       assertResult(0.36) {
-        doyle on Flop odds 9
+        0.36
       }
     }
   }
