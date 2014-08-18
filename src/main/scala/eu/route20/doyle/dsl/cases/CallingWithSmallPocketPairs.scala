@@ -44,7 +44,7 @@ object CallingWithSmallPocketPairs extends Game {
   println("Arvo: " + value)
   println("et voi pelata fit-or-fold peliä pikkupareilla,  vaan joudut riskeeraamaan sopivilla flopeilla (korkein kortti J). Entä, jos hän jatkobetsaa usein turnilla?")
 
-    value = {
+  value = {
     Case("Vastustaja korottaa normaalisti (55+, XJ+, XTs+, 76s+) ja maksat pikkuparilla tehdäksesi setin. Jatkat peliä maksamalla jatkobetsin hyvällä flopilla",
       Branch("Osut settiin", 1 / 8.5d,
         Branch("hänellä pari lähtökätenä", 60 / 188d,
@@ -53,25 +53,25 @@ object CallingWithSmallPocketPairs extends Game {
         Branch("hänellä korkeat kortit piilossa", 128 / 188d,
           Leaf("hän tekee parin ja voitat ok potin", 1 / 4d, 35d) ::
           Leaf("hän missaa ja jatkobluffaa", 3 / 4d, 8.5d) :: E) :: E) ::
-        Branch("missaat ja maksat jatkobetsin hyvällä flopilla", 7.5 / 8.5d,
-          Branch("maksat jatkobetsin puolet kerroista", 1 / 2d,
-            Branch("Vastustajalla korkeampi pari lähtökätenä", 42 / 188d,
-              Leaf("häviät myös jatkobetsin", 1 / 1d, -8.5d) :: E) ::
-            Branch("vastustallasi matalampi pari lähtönä", 18 / 188d, 
-              Leaf("vastustallasi matalampi pari lähtönä", 1 / 1d, 11d) :: E) ::
-            Branch("Vastustajalla korkeat lähtökortit", 128 / 188d,
-              Branch("Tekee parin flopilla", 1 / 3d,
-                Leaf("Tekee parin flopilla", 1 / 1d, -8.5d) :: E) ::
-              Branch("jatkobetsi ylikorteilla", 2 / 3d,
-                Leaf("mutta vetää ohi", 1 / 4d, -8.5d) ::
-                Leaf("parisi pitää", 3 / 4d, 11d) :: E) :: E) :: E) ::
-          Branch("kippaat jatkobetsiin", 1 / 2d,
-            Leaf("kippi", 1 / 1d, -3d) :: E) :: E) :: E)
+      Branch("missaat ja maksat jatkobetsin hyvällä flopilla", 7.5 / 8.5d,
+        Branch("maksat jatkobetsin puolet kerroista", 1 / 2d,
+          Branch("Vastustajalla korkeampi pari lähtökätenä", 42 / 188d,
+            Leaf("häviät myös jatkobetsin", 1 / 1d, -8.5d) :: E) ::
+          Branch("vastustallasi matalampi pari lähtönä", 18 / 188d, 
+            Leaf("vastustallasi matalampi pari lähtönä", 1 / 1d, 11d) :: E) ::
+          Branch("Vastustajalla korkeat lähtökortit", 128 / 188d,
+            Branch("Tekee parin flopilla", 1 / 3d,
+              Leaf("Tekee parin flopilla", 1 / 1d, -8.5d) :: E) ::
+            Branch("jatkobetsi ylikorteilla", 2 / 3d,
+              Leaf("mutta vetää ohi", 1 / 4d, -8.5d) ::
+              Leaf("parisi pitää", 3 / 4d, 11d) :: E) :: E) :: E) ::
+        Branch("kippaat jatkobetsiin", 1 / 2d,
+          Leaf("kippi", 1 / 1d, -3d) :: E) :: E) :: E)
   }.value
   println("Arvo: " + value)
   println("Kannattaako pienimmillä pareilla maksaa koska arvo ei ole osumisessa, vaan taitavassa postflop pelissä?")
 
-      value = {
+  value = {
     Case("Vastustaja korottaa löysästi (22+, XT+, A2+, 54s+, 64s+) ja maksat pikkuparilla",
       Branch("Osut settiin", 1 / 8.5d,
         Branch("hänellä pari lähtökätenä", 78 / 410d,
@@ -80,20 +80,20 @@ object CallingWithSmallPocketPairs extends Game {
         Branch("hänellä korkeat kortit piilossa", 332 / 410d,
           Leaf("hän tekee parin ja voitat ok potin", 1 / 4d, 45d) ::
           Leaf("hän missaa ja jatkobluffaa", 3 / 4d, 8.5d) :: E) :: E) ::
-        Branch("missaat ja maksat jatkobetsin hyvällä flopilla", 7.5 / 8.5d,
-          Branch("maksat jatkobetsin puolet kerroista", 1 / 2d,
-            Branch("Vastustajalla korkeampi pari lähtökätenä", 42 / 410d,
-              Leaf("häviät myös jatkobetsin", 1 / 1d, -8.5d) :: E) ::
-            Branch("vastustallasi matalampi pari lähtönä", 36 / 410d, 
-              Leaf("vastustallasi matalampi pari lähtönä", 1 / 1d, 11d) :: E) ::
-            Branch("Vastustajalla korkeat lähtökortit", 332 / 410d,
-              Branch("Tekee parin flopilla", 1 / 3d,
-                Leaf("Tekee parin flopilla", 1 / 1d, -8.5d) :: E) ::
-              Branch("jatkobetsi ylikorteilla tai vedolla tai bluffina", 2 / 3d,
-                Leaf("mutta vetää ohi", 1 / 4d, -8.5d) ::
-                Leaf("parisi pitää", 3 / 4d, 11d) :: E) :: E) :: E) ::
-          Branch("kippaat jatkobetsiin", 1 / 2d,
-            Leaf("kippi", 1 / 1d, -3d) :: E) :: E) :: E)
+      Branch("missaat ja maksat jatkobetsin hyvällä flopilla", 7.5 / 8.5d,
+        Branch("maksat jatkobetsin puolet kerroista", 1 / 2d,
+          Branch("Vastustajalla korkeampi pari lähtökätenä", 42 / 410d,
+            Leaf("häviät myös jatkobetsin", 1 / 1d, -8.5d) :: E) ::
+          Branch("vastustallasi matalampi pari lähtönä", 36 / 410d, 
+            Leaf("vastustallasi matalampi pari lähtönä", 1 / 1d, 11d) :: E) ::
+          Branch("Vastustajalla korkeat lähtökortit", 332 / 410d,
+            Branch("Tekee parin flopilla", 1 / 3d,
+              Leaf("Tekee parin flopilla", 1 / 1d, -8.5d) :: E) ::
+            Branch("jatkobetsi ylikorteilla tai vedolla tai bluffina", 2 / 3d,
+              Leaf("mutta vetää ohi", 1 / 4d, -8.5d) ::
+              Leaf("parisi pitää", 3 / 4d, 11d) :: E) :: E) :: E) ::
+        Branch("kippaat jatkobetsiin", 1 / 2d,
+          Leaf("kippi", 1 / 1d, -3d) :: E) :: E) :: E)
   }.value
   println("Arvo: " + value)
   println("Kannattaako pienimmillä pareilla maksaa koska arvo ei ole osumisessa, vaan taitavassa postflop pelissä?")

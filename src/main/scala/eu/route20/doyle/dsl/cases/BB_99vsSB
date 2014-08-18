@@ -1,0 +1,7 @@
+package eu.route20.doyle.dsl.cases
+
+import eu.route20.doyle.dsl._
+
+object CallingWithSmallPocketPairs extends Game {
+  var value = 0d
+}
