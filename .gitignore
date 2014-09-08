@@ -6,3 +6,5 @@
 .ensime_lucene/
 .project
 bin/
+.idea/
+*.sc
