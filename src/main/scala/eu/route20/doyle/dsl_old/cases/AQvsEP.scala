@@ -1,6 +1,6 @@
-package eu.route20.doyle.dsl.cases
+package eu.route20.doyle.dsl_old.cases
 
-import eu.route20.doyle.dsl._
+import eu.route20.doyle.dsl_old._
 
 object AQvsEP extends Game {
   var value = 0d
