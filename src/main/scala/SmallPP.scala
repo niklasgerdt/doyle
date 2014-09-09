@@ -77,6 +77,128 @@ object SmallPP extends App with Doyle {
           )
         )
       )
+    ),
+    *(1d, // Villain 602/1326. Defend with double barrelling 5/10 of misses
+      // (22+, A2s+, K7s+, Q7s+, J7s+, T8s+, 97s+, 87s, 76s, 65s, 54s, A2o+, K8o+, Q8o+, J8o+, T8o+, 97o+, 87o, 76o, 65o, 54o)
+      %(
+        *(1 / 8.5d, // at least set
+          %(
+            *(78 / 602d,
+              %(
+                *(1 / 8.5d, 0d), // villain at least set
+                *(7.5 / 8.5d, 120d) // modest pot vs pair
+              )
+            ),
+            *(524 / 602d,
+              %(
+                *(0.15, 120d) //modest pot vs ok pair
+                , *(0.15, 108.5) // small vs weak pair
+                , *(0.10, 120d) // modest pot vs draw
+                , *(0.60, 108.5) // cbet
+              )
+            )
+          )
+        ),
+        *(7.5 / 8.5d, // missed flop
+          %(
+            *(5 / 10d, 96.5),
+            *(5 / 10d,
+              %(
+                *(78 / 602d,
+                  %(
+                    *(1 / 8.5d, 76.5),
+                    *(7.5d / 8.5d,
+                      %(
+                        *(0.5, 76.5),
+                        *(0.5, 108.5)
+                      )
+                    )
+                  )
+                ),
+                *(524 / 602d,
+                  %(
+                    *(0.15, 76d),
+                    *(0.15, 108.5),
+                    *(0.10, 90d),
+                    *(0.60, 108.5)
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    ),
+    *(1d, // Villain 602/1326. Defend with double barrelling 5/10 of misses
+      // (22+, A2s+, K7s+, Q7s+, J7s+, T8s+, 97s+, 87s, 76s, 65s, 54s, A2o+, K8o+, Q8o+, J8o+, T8o+, 97o+, 87o, 76o, 65o, 54o)
+      %(
+        *(1 / 8.5d, // at least set
+          %(
+            *(78 / 602d,
+              %(
+                *(1 / 8.5d, 0d), // villain at least set
+                *(7.5 / 8.5d, 125d) // modest pot vs pair
+              )
+            ),
+            *(524 / 602d,
+              %(
+                *(0.15, 120d), //modest pot vs ok pair
+                *(0.15,
+                  %(
+                    *(0.7, 125d),
+                    *(0.3, 108d)
+                  )), // small vs weak pair
+                *(0.10, 140d),
+                *(0.60,
+                  %(
+                    *(0.9, 108.5),
+                    *(0.1, 155d)
+                  )
+                )
+              )
+            )
+          )
+        ),
+        *(7.5 / 8.5d, // missed flop
+          %(
+            *(9 / 10d, 96.5),
+            *(1 / 10d,
+              %(
+                *(78 / 602d,
+                  %(
+                    *(1 / 8.5d, 76.5),
+                    *(7.5d / 8.5d,
+                      %(
+                        *(0.5, 76.5),
+                        *(0.5, 108.5)
+                      )
+                    )
+                  )
+                ),
+                *(524 / 602d,
+                  %(
+                    *(0.15, 76d),
+                    *(0.15,
+                      %(
+                        *(0.7, 76d),
+                        *(0.3, 108d)
+                      )
+                    ),
+                    *(0.10, 76d), // semibluffs with draws
+                    *(0.60,
+                      %(
+                        // fights back with triple barrels
+                        *(0.1, 76d),
+                        *(0.9, 108.5)
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
     )
   ).foreach(println(_))
 }
