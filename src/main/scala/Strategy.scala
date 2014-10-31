@@ -1,4 +1,4 @@
-package eu.route20.doyle.dsl_old
+package doyle.old
 
 case class Case(desc: String, nodes: List[Strategy]) extends Strategy
 case class Branch(desc: String, prob: Double, nodes: List[Strategy]) extends Strategy

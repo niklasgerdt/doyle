@@ -1,4 +1,4 @@
-package eu.route20.doyle
+package doyle
 
 trait Doyle {
 
@@ -14,3 +14,4 @@ trait Doyle {
 
   def <(b: Double, p: Double, v: Double) = 100 * p * (v - b)
 }
+

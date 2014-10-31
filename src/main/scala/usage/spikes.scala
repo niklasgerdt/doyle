@@ -1,10 +1,9 @@
-package eu.route20.doyle.calculations
+package usage
 
-import eu.route20.doyle.Doyle
+import doyle.Doyle
 
 // Solving the optimal way to play small pocket pairs
 object SmallPP extends App with Doyle {
-
   List(
     *(1d, 99), // Stack after fold
     *(1d, // Set mining vs tight raiser 146/1326 (22+, ATs+, AJo+, KQ+) is minimally profitable

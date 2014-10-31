@@ -1,2 +1,0 @@
-loadImports = () ->
-  alert "TADAA"
