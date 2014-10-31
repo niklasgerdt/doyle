@@ -2,6 +2,23 @@ package usage
 
 import doyle.Doyle
 
+object Example extends App with Doyle {
+  // value of single leaf with prob. 100% and val 100
+  List(*(1d, 100d)).foreach(println(_))
+
+  // tree with two leafs each happening with prob. 50% and with values 100 and 0
+  List(
+    *(1d,
+      %(
+        *(1 / 2d, 100d),
+        *(1 / 2d, 0d)
+      )
+    )
+  ).foreach(println(_))
+
+}
+
+
 // Solving the optimal way to play small pocket pairs
 object SmallPP extends App with Doyle {
   List(
@@ -272,3 +289,4 @@ object SmallPP extends App with Doyle {
     )
   ).foreach(println(_))
 }
+
