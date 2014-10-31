@@ -16,6 +16,20 @@ object Example extends App with Doyle {
     )
   ).foreach(println(_))
 
+  List(
+    *(1d,
+      %(
+        *(1 / 3d, 100d),
+        *(1 / 3d, 0d),
+        *(1 / 3d,
+          %(
+            *(1 / 2d, 100d),
+            *(1 / 2d, 0d)
+          )
+        )
+      )
+    )
+  ).foreach(println(_))
 }
 
 
